@@ -1,9 +1,11 @@
+/* eslint-disable prettier/prettier */
 import nx from '@nx/eslint-plugin';
-
+import recommendedConfig from 'eslint-plugin-prettier/recommended';
 export default [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
+  recommendedConfig,
   {
     ignores: ['**/dist'],
   },
