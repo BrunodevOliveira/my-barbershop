@@ -79,6 +79,10 @@
         {
           "label": "🗃️ database",
           "description": "🗃️ perform database related changes."
+        },
+        {
+          "label": "🏛️ arch",
+          "description": "🏛️ Changes to the application architecture"
         }
       ],
       "description": "Type of changes"

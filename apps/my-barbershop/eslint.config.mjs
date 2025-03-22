@@ -24,6 +24,12 @@ export default [
           style: 'kebab-case',
         },
       ],
+      '@angular-eslint/component-class-suffix': [
+        'error',
+        {
+          suffixes: ['Component', 'Directive', 'Pipe', 'Service', 'Page', 'Dialog', 'Layout'],
+        },
+      ],
     },
   },
   {
