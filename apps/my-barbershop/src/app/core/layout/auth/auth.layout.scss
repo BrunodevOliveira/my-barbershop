@@ -1,0 +1,11 @@
+@use 'media' as *;
+
+nz-card {
+  margin: 0 auto;
+  top: 2rem;
+  width: 450px;
+
+  @include max-tablet {
+    width: 90vw;
+  }
+}

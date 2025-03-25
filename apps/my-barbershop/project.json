@@ -27,9 +27,23 @@
           }
         ],
         "styles": [
-          "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-          "apps/my-barbershop/src/styles.scss"
+          "apps/my-barbershop/src/styles.scss",
+          {
+            "input": "apps/my-barbershop/src/styles/default.less",
+            "bundleName": "default",
+            "inject": false
+          },
+          {
+            "input": "apps/my-barbershop/src/styles/dark.less",
+            "bundleName": "dark",
+            "inject": false
+          }
         ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "apps/my-barbershop/src/styles"
+        ]
+      },
         "scripts": []
       },
       "configurations": {
