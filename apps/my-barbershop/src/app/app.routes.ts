@@ -10,6 +10,10 @@ export const appRoutes: Route[] = [
 
         loadChildren: () => import('./domain/auth/auth.routes').then(m => m.AUTH_ROUTES),
       },
+      {
+        path: 'reset-password',
+        loadComponent: () => import('./core/pages/reset-password/reset-password.page').then(m => m.ResetPasswordPage),
+      },
     ],
   },
 ];
