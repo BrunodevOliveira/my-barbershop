@@ -1,0 +1,88 @@
+<h2>Detalhes da empresa</h2>
+
+<span nz-typography nzType="secondary">Agora precisamos de algumas informações sobre a empresa</span>
+
+<form nz-form nzLayout="vertical" [formGroup]="companyForm">
+  <nz-form-item>
+    <nz-form-label nzFor="name">Nome</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="name" title="name" formControlName="name" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzFor="cnpj">CNPJ</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="text" title="cnpj" formControlName="cnpj" mask="00.000.000/0000-00" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzFor="zip_code">Cep</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="text" title="zip_code" formControlName="zip_code" mask="00.000-000" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <div nz-flex [nzGap]="12">
+    <nz-form-item class="input-large">
+      <nz-form-label nzFor="address">Endereço</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="address" formControlName="address" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="input-small">
+      <nz-form-label nzFor="number">Número</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="number" formControlName="number" />
+      </nz-form-control>
+    </nz-form-item>
+  </div>
+
+  <div nz-flex [nzGap]="12">
+    <nz-form-item>
+      <nz-form-label nzFor="complement">Complemento</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="complement" formControlName="complement" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label nzFor="neighborhood">Bairro</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="neighborhood" formControlName="neighborhood" />
+      </nz-form-control>
+    </nz-form-item>
+  </div>
+
+  <div nz-flex [nzGap]="8">
+    <nz-form-item class="input-large">
+      <nz-form-label nzFor="city">Cidade</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="city" formControlName="city" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="input-small">
+      <nz-form-label nzFor="state">Estado</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="state" formControlName="state" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="input-small">
+      <nz-form-label nzFor="country">País</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" title="country" formControlName="country" />
+      </nz-form-control>
+    </nz-form-item>
+  </div>
+</form>
+
+<nz-flex nzGap="small" nzJustify="center">
+  <button nz-button nzType="primary" [routerLink]="['/subscription/admin']" (click)="previousStep()">
+    <nz-icon nzType="left" />
+    Etapa Anterior
+  </button>
+  <button nz-button nzType="primary" (click)="submit()">
+    Criar conta
+    <!-- <nz-icon nzType="user-add" nzTheme="outline" /> -->
+  </button>
+</nz-flex>

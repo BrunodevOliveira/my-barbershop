@@ -1,0 +1,40 @@
+<h2>Detalhes do administrador</h2>
+
+<span nz-typography nzType="secondary">Utilizaremos os dados abaixo para criar sua conta no sistema</span>
+
+<form nz-form nzLayout="vertical" [formGroup]="adminForm">
+  <nz-form-item>
+    <nz-form-label nzFor="name">Nome</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="name" title="name" formControlName="name" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzFor="email">E-mail</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="email" title="email" formControlName="email" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzFor="tel">Telefone</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="tel" title="phone" formControlName="phone" mask="(00) 00000-0000||(00) 0000-0000" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label nzFor="password">Senha</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="password" title="password" formControlName="password" />
+    </nz-form-control>
+  </nz-form-item>
+</form>
+
+<nz-flex nzGap="small" nzJustify="center">
+  <button nz-button nzType="primary" [routerLink]="['/subscription/company']" (click)="nextStep()">
+    Próxima etapa
+    <nz-icon nzType="right" nzTheme="outline" />
+  </button>
+</nz-flex>
