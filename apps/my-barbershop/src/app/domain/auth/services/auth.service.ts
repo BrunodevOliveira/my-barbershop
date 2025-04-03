@@ -20,7 +20,7 @@ export class AuthService {
     const { data } = await this.supabase.auth.getSession();
 
     if (!data.session) {
-      await this.purgeAndRedirect();
+      // await this.purgeAndRedirect();
       return;
     }
 
