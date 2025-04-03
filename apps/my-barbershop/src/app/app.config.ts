@@ -9,6 +9,7 @@ import { AuthService } from '@domain/auth/services/auth.service';
 import { provideTransloco } from '@jsverse/transloco';
 import { ThemeService } from '@shared/services/theme/theme.service';
 import { provideNzI18n, pt_BR } from 'ng-zorro-antd/i18n';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { appRoutes } from './app.routes';
 import { TranslocoHttpLoader } from './transloco-loader';
 
@@ -35,5 +36,6 @@ export const appConfig: ApplicationConfig = {
     }),
     provideAppInitializer(() => inject(ThemeService).loadTheme()),
     provideAppInitializer(() => inject(AuthService).load()),
+    provideEnvironmentNgxMask(),
   ],
 };
