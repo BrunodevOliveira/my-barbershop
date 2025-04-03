@@ -1,0 +1,28 @@
+@use 'media' as *;
+
+nz-card {
+  margin: 0 auto;
+  top: 2rem;
+  width: 450px;
+
+  @include max-tablet {
+    width: 90vw;
+  }
+
+  ::ng-deep {
+
+    h2 {
+      text-align: center;
+    }
+
+    nz-steps {
+      text-align: center;
+      margin-bottom: 1rem;
+      width: 80%;
+    }
+
+    form {
+      margin-top: 1rem;
+    }
+  }
+}
