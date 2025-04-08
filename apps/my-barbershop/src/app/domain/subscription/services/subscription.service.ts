@@ -19,7 +19,7 @@ export class SubscriptionService {
       name: new FormControl<string | null>(null),
       cnpj: new FormControl<string | null>(null),
       zip_code: new FormControl<string | null>(null), //CEP
-      address: new FormControl<string | null>(null),
+      street: new FormControl<string | null>(null),
       number: new FormControl<string | null>(null),
       complement: new FormControl<string | null>(null),
       neighborhood: new FormControl<string | null>(null),
@@ -29,7 +29,7 @@ export class SubscriptionService {
     }),
   });
 
-  private switchFields = ['address', 'neighborhood', 'city', 'state', 'country'];
+  private switchFields = ['street', 'neighborhood', 'city', 'state', 'country'];
 
   getAdminForm() {
     return this.form.get('admin') as FormGroup;
@@ -64,7 +64,7 @@ export class SubscriptionService {
       const address = await cep(zipCode);
       console.log('Chegou aqui:', zipCode, address);
       this.getCompanyForm().patchValue({
-        address: address.street,
+        street: address.street,
         neighborhood: address.neighborhood,
         city: address.city,
         state: address.state,
