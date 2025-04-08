@@ -2,7 +2,9 @@
 
 <span nz-typography nzType="secondary">Agora precisamos de algumas informações sobre a empresa</span>
 
-<form nz-form nzLayout="vertical" [formGroup]="companyForm">
+<app-dynamic-form [config]="formConfig" />
+
+<!-- <form nz-form nzLayout="vertical" [formGroup]="companyForm">
   <nz-form-item>
     <nz-form-label nzFor="name">Nome</nz-form-label>
     <nz-form-control>
@@ -74,15 +76,16 @@
       </nz-form-control>
     </nz-form-item>
   </div>
-</form>
+</form> -->
 
 <nz-flex nzGap="small" nzJustify="center">
-  <button nz-button nzType="primary" [routerLink]="['/subscription/admin']" (click)="previousStep()">
-    <nz-icon nzType="left" />
+  <button nz-button nzType="primary" [routerLink]="['/subscription', 'admin']" (click)="previousStep()">
+    <!-- <nz-icon nzType="left" /> -->
+    <i mbIcon mbType="arrow_back"></i>
     Etapa Anterior
   </button>
   <button nz-button nzType="primary" (click)="submit()">
     Criar conta
-    <!-- <nz-icon nzType="user-add" nzTheme="outline" /> -->
+    <i mbIcon mbType="arrow_forward"></i>
   </button>
 </nz-flex>

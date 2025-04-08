@@ -4,3 +4,8 @@
 .input-large {
   flex: 4;
 }
+button:has(i) {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}

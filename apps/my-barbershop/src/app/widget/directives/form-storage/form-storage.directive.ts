@@ -32,7 +32,7 @@ export class FormStorageDirective implements OnInit {
       const zipCode = companyForm?.get('zip_code')?.value;
 
       if (zipCode?.length === 8) {
-        this.subscriptionService.getAddressByZipCode(zipCode);
+        // this.subscriptionService.getAddressByZipCode(zipCode);
       }
     }
   }

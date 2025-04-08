@@ -2,7 +2,9 @@
 
 <span nz-typography nzType="secondary">Utilizaremos os dados abaixo para criar sua conta no sistema</span>
 
-<form nz-form nzLayout="vertical" [formGroup]="adminForm">
+<app-dynamic-form [config]="formConfig"></app-dynamic-form>
+
+<!-- <form nz-form nzLayout="vertical" [formGroup]="adminForm">
   <nz-form-item>
     <nz-form-label nzFor="name">Nome</nz-form-label>
     <nz-form-control>
@@ -30,10 +32,10 @@
       <input nz-input type="password" title="password" formControlName="password" />
     </nz-form-control>
   </nz-form-item>
-</form>
+</form> -->
 
 <nz-flex nzGap="small" nzJustify="center">
-  <button nz-button nzType="primary" [routerLink]="['/subscription/company']" (click)="nextStep()">
+  <button nz-button nzType="primary" [routerLink]="['/subscription/company']">
     Próxima etapa
     <nz-icon nzType="right" nzTheme="outline" />
   </button>
